@@ -20,7 +20,7 @@ var visualize = function(data) {
   // == BOILERPLATE ==
   var margin = { top: 50, right: 50, bottom: 50, left: 50 },
      width = 800 - margin.left - margin.right,
-     height = 400;
+     height = 1000;
      /*
   var svg = d3.select("#chart")
               .append("svg")
@@ -31,34 +31,24 @@ var visualize = function(data) {
               .append("g")
               .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
   */
-  
-  // create an array with nodes
-  var nodes = new vis.DataSet([
-    {id: 1, label: 'Node 1'},
-    {id: 2, label: 'Node 2'},
-    {id: 3, label: 'Node 3'},
-    {id: 4, label: 'Node 4'},
-    {id: 5, label: 'Node 5'}
-  ]);
 
-  // create an array with edges
-  var edges = new vis.DataSet([
-    {from: 1, to: 3},
-    {from: 1, to: 2},
-    {from: 2, to: 4},
-    {from: 2, to: 5},
-    {from: 3, to: 3}
-  ]);
-
-  // create a network
-  var container = document.getElementById('chart');
-  var data = {
-    nodes: nodes,
-    edges: edges
-  };
-  var options = {};
-  var network = new vis.Network(container, data, options);
-
+var G = new jsnx.DiGraph();
+ 
+G.addNodesFrom([1,2,3,4,5,[9,{color: '#008A00'}]], {color: '#0064C7'});
+G.addCycle([1,2,3,4,5]);
+G.addEdgesFrom([[1,9], [9,1]]);
+ console.log(G);
+jsnx.draw(G, {
+    element: '#chart', 
+    withLabels: true, 
+    nodeStyle: {
+        fill: function(d) { 
+            return d.data.color; 
+        }
+    }, 
+    labelStyle: {fill: 'white'},
+    stickyDrag: true
+});
   // == Your code!  ==
 
 };
