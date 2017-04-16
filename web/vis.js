@@ -5,6 +5,7 @@ var G = new jsnx.DiGraph();
 var edges = []; //required because edges are added to the graph dynamically
 data.forEach(function(d) {
     G.addNode(d.Number, {
+        color: "#CCCCCC",
         id: d.Number
     });
 
@@ -46,9 +47,24 @@ function setNodesMousover(myFun) {
     });
 }
 
-setNodesOnClick(function(x) {
-    alert(x)
-});
+
+function editNodes(x){
+    G.node.get(x).color = '#7FFFD4';
+    console.log(G.node.get(x).color );
+    edges.forEach( function (e) {
+        if(e[1] == x){
+            G.node.get(e[0]).color = "#E6E6FA"
+            console.log(  G.node.get(e[0]).color);
+        }
+    });
+}
+setNodesOnClick(function(x){editNodes(x)});
+
+
+
+// setNodesOnClick(function(x) {
+//     alert(x)
+// });
 setNodesMousover(function(x) {
     data.forEach(function(d) {
         if (d.Number == x) {
