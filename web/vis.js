@@ -50,5 +50,30 @@ setNodesOnClick(function(x) {
     alert(x)
 });
 setNodesMousover(function(x) {
+    data.forEach(function(d) {
+        if (d.Number == x) {
+            x += ": " + d.Name + "\n";
+
+            x += "Required: ";
+            for (var i = 0; i < d.Required.length; i++) {
+                x += d.Required[i];
+                if (i < d.Required.length - 1) {
+                    x += ", ";
+                }
+            }
+            x += "\n";
+
+            x += "Recommended: ";
+            for (var i = 0; i < d.Recommended.length; i++) {
+                x += d.Recommended[i];
+                if (i < d.Recommended.length - 1) {
+                    x += ", ";
+                }
+            }
+            x += "\n";
+
+            x += d.URL;
+        }
+    });
     console.log(x)
 })
