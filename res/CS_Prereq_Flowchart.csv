@@ -1,0 +1,58 @@
+Number,Name,Required,Recommended,URL
+MATH 220,Calculus,,,https://courses.illinois.edu/schedule/terms/MATH/220
+MATH 231,Calculus II,MATH 220,,https://courses.illinois.edu/schedule/terms/MATH/231
+MATH 241,Calculus III,MATH 231,,https://courses.illinois.edu/schedule/terms/MATH/241
+MATH 347,Fundamental Mathematics,MATH 231,,https://courses.illinois.edu/schedule/terms/MATH/347
+MATH 415,Applied Linear Algebra,MATH 241,,https://courses.illinois.edu/schedule/terms/MATH/415
+PHYS 211,University Physics: Mechanics,,MATH 231,https://courses.illinois.edu/schedule/terms/PHYS/211
+PHYS 212,University Physics: Elec & Mag,PHYS 211,MATH 241,https://courses.illinois.edu/schedule/terms/PHYS/212
+CS 101,Intro Computing: Engrg & Sci,MATH 220,,https://cs.illinois.edu/courses/profile/CS101
+CS 102,Little Bits to Big Ideas,,,https://cs.illinois.edu/courses/profile/CS102
+CS 105,Intro Computing: Non-Tech,,,https://cs.illinois.edu/courses/profile/CS105
+CS 125,Intro to Computer Science,,,https://cs.illinois.edu/courses/profile/CS125
+CS 126,Software Design Studio,CS 125,,https://cs.illinois.edu/courses/profile/CS126
+CS 173,Discrete Structures,"MATH 220, CS 125",,https://cs.illinois.edu/courses/profile/CS173
+CS 196-25,Freshman Honors (CS 125),,CS 125,https://cs.illinois.edu/courses/profile/CS196
+CS 196-73,Freshman Honors (CS 173),,CS 173,https://cs.illinois.edu/courses/profile/CS196
+CS 199,Undergraduate Open Seminar,,,https://cs.illinois.edu/courses/profile/CS199
+CS 210,Ethics & Professional Issues,CS 225,,https://cs.illinois.edu/courses/profile/CS210
+CS 225,Data Structures,"CS 125, CS 173",,https://cs.illinois.edu/courses/profile/CS225
+CS 233,Computer Architecture,"CS 125, CS 173",CS 225,https://cs.illinois.edu/courses/profile/CS233
+CS 241,System Programming,CS 225,CS 233,https://cs.illinois.edu/courses/profile/CS241
+CS 242,Programming Studio,CS 241,,https://cs.illinois.edu/courses/profile/CS242
+CS 296-25,Honors Course (CS 225),,CS 225,https://cs.illinois.edu/courses/profile/CS296
+CS 296-33,Honors Course (CS 233),,CS 233,https://cs.illinois.edu/courses/profile/CS296
+CS 296-41,Honors Course (CS 241),,CS 241,https://cs.illinois.edu/courses/profile/CS296
+CS 357,Numerical Methods I,"CS 125, MATH 415, MATH 241",,https://cs.illinois.edu/courses/profile/CS357
+CS 361,Prob & Stat for Computer Sci,MATH 220,MATH 415,https://cs.illinois.edu/courses/profile/CS361
+CS 374,Intro to Algs & Models of Comp,"CS 225, MATH 415",,https://cs.illinois.edu/courses/profile/CS374
+CS 410,Text Information Systems ,CS225 ,,https://cs.illinois.edu/courses/profile/CS410
+CS 411,Database Systems ,CS225 ,,https://cs.illinois.edu/courses/profile/CS411
+CS 412,Intro to Data Mining,CS225 ,,https://cs.illinois.edu/courses/profile/CS412
+CS 413,Intro to Combinatorics ,MATH 347,,https://cs.illinois.edu/courses/profile/CS413
+CS 418,Interactive Computer Graphics,"CS225, MATH 241, MATH 415",,https://cs.illinois.edu/courses/profile/CS418
+CS 419,Production Computer Graphics,CS418,,https://cs.illinois.edu/courses/profile/CS419
+CS 421,Programming Languages & Compilers ,"CS 233, CS 374",,https://cs.illinois.edu/courses/profile/CS421
+CS 422,Programming Language Design ,CS 421,,https://cs.illinois.edu/courses/profile/CS422
+CS 423,Operating Systems Design,CS 241,,https://cs.illinois.edu/courses/profile/CS423
+CS 425 ,Distributed Systems ,CS 241,,https://cs.illinois.edu/courses/profile/CS425
+CS 427,Software Engineering I,"CS 225, CS 374",,https://cs.illinois.edu/courses/profile/CS427
+CS 428,Software Engineering II,CS 427,,https://cs.illinois.edu/courses/profile/CS428
+CS 429,"Software Engineering II, ACP",CS 427,,https://cs.illinois.edu/courses/profile/CS429
+CS 431,Embedded Systems,CS 241,,https://cs.illinois.edu/courses/profile/CS431
+CS 433,Computer System Organization,CS 233,,https://cs.illinois.edu/courses/profile/CS433
+CS 438,Communication Networks,CS 241,,https://cs.illinois.edu/courses/profile/CS438
+CS 440,Artificial Intelligence,CS 225,,https://cs.illinois.edu/courses/profile/CS440
+CS 446,Machine Learning,"CS 374, CS 440",,https://cs.illinois.edu/courses/profile/CS446
+CS 450,Numerical Analysis,"CS 125, CS 357, MATH 415",,https://cs.illinois.edu/courses/profile/CS450
+CS 460,Security Laboratory,CS 461,,https://cs.illinois.edu/courses/profile/CS460
+CS 461,Computer Security I,CS 241,,https://cs.illinois.edu/courses/profile/CS461
+CS 463,Computer Security II,CS 461,,https://cs.illinois.edu/courses/profile/CS463
+CS 465,User Interface Design,CS 225,,https://cs.illinois.edu/courses/profile/CS465
+CS 466,Introduction to Bioinformatics,CS 225,,https://cs.illinois.edu/courses/profile/CS466
+CS 482,Simulation,CS 125,,https://cs.illinois.edu/courses/profile/CS482
+CS 484,Parallel Programming,CS 241,,https://cs.illinois.edu/courses/profile/CS484
+CS 491,Adv Competitive Algorithm Prog,CS 374,,https://cs.illinois.edu/courses/profile/CS491
+CS 492,Senior Project I,,,https://cs.illinois.edu/courses/profile/CS492
+CS 493,"Senior Project II, ACP",CS 492,,https://cs.illinois.edu/courses/profile/CS493
+CS 494,Senior Project II,CS 492,,https://cs.illinois.edu/courses/profile/CS494
