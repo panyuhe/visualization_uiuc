@@ -49,6 +49,23 @@ jsnx.draw(G, {
     labelStyle: {fill: 'white'},
     stickyDrag: true
 });
+
+function setNodesOnClick(myFun){
+  $.each($("#chart .nodes").children(), function(index, value) {
+    var node = $(value);
+    node.click(function(){ myFun(node.children().last().html())});
+  });
+}
+
+function setNodesMousover(myFun){
+  $.each($("#chart .nodes").children(), function(index, value) {
+    var node = $(value);
+    node.mouseover(function(){ myFun(node.children().last().html())});
+  });
+}
+
+setNodesOnClick(function(x){alert(x)});
+setNodesMousover(function(x){console.log(x)})
   // == Your code!  ==
 
 };
