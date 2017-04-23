@@ -29,6 +29,19 @@ jsnx.draw(G, {
     },
     false);
 
+function getPrereqs(key, data){
+    for(var i = 0; i < data.length; i++){
+        if(data[i].Number == key){
+          return data[i].Required;
+        }
+    }
+
+    console.log("key not found");
+    return -1;
+}
+
+//console.log(getPrereqs("MATH 347", data));
+
 function setNodesOnClick(myFun) {
     $.each($("#chart .nodes").children(), function(index, value) {
         var node = $(value);
