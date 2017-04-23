@@ -191,21 +191,21 @@ var data = [
   {
     "Number": "CS 410",
     "Name": "Text Information Systems",
-    "Required": ["CS225"],
+    "Required": ["CS 225"],
     "Recommended": [],
     "URL": "https://cs.illinois.edu/courses/profile/CS410"
   },
   {
     "Number": "CS 411",
     "Name": "Database Systems",
-    "Required": ["CS225"],
+    "Required": ["CS 225"],
     "Recommended": [],
     "URL": "https://cs.illinois.edu/courses/profile/CS411"
   },
   {
     "Number": "CS 412",
     "Name": "Intro to Data Mining",
-    "Required": ["CS225"],
+    "Required": ["CS 225"],
     "Recommended": [],
     "URL": "https://cs.illinois.edu/courses/profile/CS412"
   },
@@ -219,14 +219,14 @@ var data = [
   {
     "Number": "CS 418",
     "Name": "Interactive Computer Graphics",
-    "Required": ["CS225", "MATH 241", "MATH 415"],
+    "Required": ["CS 225", "MATH 241", "MATH 415"],
     "Recommended": [],
     "URL": "https://cs.illinois.edu/courses/profile/CS418"
   },
   {
     "Number": "CS 419",
     "Name": "Production Computer Graphics",
-    "Required": ["CS418"],
+    "Required": ["CS 418"],
     "Recommended": [],
     "URL": "https://cs.illinois.edu/courses/profile/CS419"
   },
