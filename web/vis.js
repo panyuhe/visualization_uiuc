@@ -38,15 +38,14 @@ function setNodesOnClick(myFun) {
     });
 }
 
-function setNodesMousover(myFun) {
+function setNodesMouseover(myFun) {
     $.each($("#chart .nodes").children(), function(index, value) {
         var node = $(value);
-        node.mouseover(function() {
-            myFun(node.children().last().html())
+        node.mouseenter(function() {
+            myFun(node,node.children().last().html())
         });
     });
 }
-
 
 function editNodes(x){
     G.node.get(x).color = '#7FFFD4';
@@ -65,31 +64,55 @@ setNodesOnClick(function(x){editNodes(x)});
 // setNodesOnClick(function(x) {
 //     alert(x)
 // });
-setNodesMousover(function(x) {
+
+
+setNodesMouseover(function(node, x) {
     data.forEach(function(d) {
         if (d.Number == x) {
-            x += ": " + d.Name + "\n";
+            x += " • " + d.Name + " • ";
 
             x += "Required: ";
-            for (var i = 0; i < d.Required.length; i++) {
-                x += d.Required[i];
-                if (i < d.Required.length - 1) {
-                    x += ", ";
+            if (d.Required.length == 0) {
+                x += "N/A";
+            }
+            else {
+                for (var i = 0; i < d.Required.length; i++) {
+                    x += d.Required[i];
+                    if (i < d.Required.length - 1) {
+                        x += ", ";
+                    }
                 }
             }
-            x += "\n";
+            x += " • ";
 
             x += "Recommended: ";
-            for (var i = 0; i < d.Recommended.length; i++) {
-                x += d.Recommended[i];
-                if (i < d.Recommended.length - 1) {
-                    x += ", ";
+            if (d.Recommended.length == 0) {
+                x += "N/A";
+            }
+            else {
+                for (var i = 0; i < d.Recommended.length; i++) {
+                    x += d.Recommended[i];
+                    if (i < d.Recommended.length - 1) {
+                        x += ", ";
+                    }
                 }
             }
-            x += "\n";
-
-            x += d.URL;
         }
     });
-    console.log(x)
+    console.log(x);
+    tempAlert(node, x);
+    //setTimeout(function() { alert(x); }, 5000);
+
 })
+
+function tempAlert(node,msg)
+{
+ var el = document.createElement("div");
+ el.setAttribute("style","position:absolute;top:40%;left:20%;background-color:#7FFFD4;");
+ el.innerHTML = msg;
+ node.mouseleave(function() {
+     if(el.parentNode !== null)
+        el.parentNode.removeChild(el);
+ });
+    document.body.appendChild(el);
+ }
