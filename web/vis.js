@@ -1,8 +1,8 @@
 "use strict";
 
-const prereqColor = "#42f48c";
-const curColor = "#41f4d9";
-const unselectedColor = "#a041f4";
+const prereqColor = "#8D7BFF";
+const curColor = "#CF7BFF";
+const unselectedColor = "#7BABFF";
 
 var curSelectedNode;
 
@@ -163,7 +163,7 @@ setNodesMouseover(function(node, x) {
 function tempAlert(node,msg)
 {
     var el = document.createElement("div");
-    el.setAttribute("style","position:absolute;top:40%;left:20%;background-color:#7FFFD4;");
+    el.setAttribute("style","position:absolute;top:20%;left:20%;");
     el.innerHTML = msg;
     node.mouseleave(function() {
         if(el.parentNode !== null)
