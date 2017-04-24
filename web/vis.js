@@ -43,8 +43,6 @@ function getPrereqs(key, data){
     return -1;
 }
 
-//console.log(getPrereqs("MATH 347", data));
-
 function setNodesOnClick(myFun) {
     $.each($("#chart .nodes").children(), function(index, value) {
         var node = $(value);
@@ -62,7 +60,7 @@ function getNodeG(nodeid){
         if(nodeid == node.children().last().html()){   
             ret = node;
         }
-    }
+    });
     return ret;
 }
 
