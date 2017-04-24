@@ -1,11 +1,18 @@
 "use strict";
 
+const prereqColor = "#42f48c";
+const curColor = "#41f4d9";
+const unselectedColor = "#a041f4";
+
+var curSelectedNode;
+
+
 var G = new jsnx.DiGraph();
 
 var edges = []; //required because edges are added to the graph dynamically
 data.forEach(function(d) {
     G.addNode(d.Number, {
-        color: "#7FFFD4",
+        color: unselectedColor,
         id: d.Number
     });
 
@@ -56,7 +63,6 @@ function getNodeG(nodeid){
     var ret;
     $.each($("#chart .nodes").children(), function(index, value) {
         var node = $(value);
-        //console.log(node.children().last().html());
         if(nodeid == node.children().last().html()){   
             ret = node;
         }
@@ -79,12 +85,30 @@ function getCircle(node){
 
 function setNodeFillColor(nodeid, color){
     getCircle(getNodeG(nodeid)).css("fill", color);
-    console.log(nodeid);
-    console.log(getCircle(getNodeG(nodeid)));
+}
+
+function deselectNode(nodeid){
+    setNodeFillColor(nodeid, unselectedColor);
+    var prereqs = getPrereqs(nodeid, data);
+    prereqs.forEach(function(currentValue, index, array) {
+        setNodeFillColor(currentValue, unselectedColor);
+    });
+}
+
+function selectNode(nodeid){
+    if(curSelectedNode){
+        deselectNode(curSelectedNode);
+    }
+    curSelectedNode = nodeid;
+    setNodeFillColor(nodeid, curColor);
+    var prereqs = getPrereqs(nodeid, data);
+    prereqs.forEach(function(currentValue, index, array) {
+        setNodeFillColor(currentValue, prereqColor);
+    });
 }
 
 setNodesOnClick(function(nodeid){
-    setNodeFillColor(nodeid, "#4286f4")
+    selectNode(nodeid);
 });
 
 setNodesMouseover(function(node, x) {
@@ -128,12 +152,12 @@ setNodesMouseover(function(node, x) {
 
 function tempAlert(node,msg)
 {
- var el = document.createElement("div");
- el.setAttribute("style","position:absolute;top:40%;left:20%;background-color:#7FFFD4;");
- el.innerHTML = msg;
- node.mouseleave(function() {
-     if(el.parentNode !== null)
-        el.parentNode.removeChild(el);
- });
+    var el = document.createElement("div");
+    el.setAttribute("style","position:absolute;top:40%;left:20%;background-color:#7FFFD4;");
+    el.innerHTML = msg;
+    node.mouseleave(function() {
+        if(el.parentNode !== null)
+           el.parentNode.removeChild(el);
+    });
     document.body.appendChild(el);
- }
+}
