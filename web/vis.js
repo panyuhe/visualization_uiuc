@@ -22,6 +22,12 @@ data.forEach(function(d) {
         edges.push(edge);
     }
 
+    var recommended = d.Recommended;
+    for (var i = 0; i < recommended.length; i++) {
+        var edge = [d.Number, recommended[i]];
+        edges.push(edge);
+    }
+
 });
 
 G.addEdgesFrom(edges);
@@ -35,7 +41,11 @@ jsnx.draw(G, {
             fill: function(d){return d.data.color},
         },
         withLabels: true,
-        labels: 'id'
+        labels: 'id',
+        layoutAttr: {
+        charge: -300,
+        linkDistance: 100
+        },
     },
     true);
 
